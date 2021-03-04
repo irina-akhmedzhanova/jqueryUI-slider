@@ -26,7 +26,7 @@ $(function () {
 
   $("#slider").slider({
     orientation: "horizontal",
-    animate: "slow",
+    animate: "fast",
     range: "min",
     min: 0,
     max: 360,
