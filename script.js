@@ -7,33 +7,34 @@ function getColor (color, value) {
 };
 
 function refreshColor() {
-
-  let colorFromSlider = $("#slider").slider("value")
+  let colorFromSlider = $("#slider").slider("value"),
       radioValue = $('input[name="radio"]:checked').val();
 
-  if (radioValue) {
-    let color = getColor(colorFromSlider, radioValue)
-    $("#text-box").css(radioValue, color);
-  } else {
-    
-  }
+  let color = getColor(colorFromSlider, radioValue);
+  $("#text-box").css(radioValue, color);
 };
+
 
 $(function () {
   $("#group1").buttonset();
 
-  $('input[name="radio"]').click(refreshColor);
-
   $("#slider").slider({
     orientation: "horizontal",
-    animate: "slow",
+    animate: "fast",
     range: "min",
     min: 0,
     max: 360,
-    value: 0,
-    start: refreshColor,
+    values: 0,
     slide: refreshColor,
     change: refreshColor
-  })
+  });
+
+  $("#radio1").click(function() {
+    $("#slider").slider("option", "value", 0)
+  });
+
+  $("#radio2").click(function() {
+    $("#slider").slider("option", "value", 0);
+  });
 });
 
