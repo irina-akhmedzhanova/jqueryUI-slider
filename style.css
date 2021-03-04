@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #000;
+}
+
+.main-content {
+  min-height: 70%;
+  width: 80%;
+  background-color: #fff;
+}
+
+.main-content_btns {
+  border: 1px solid #000;
+  margin: 15px;
+  position: relative;
+}
+
+.main-content_btns span:first-child {
+  position: absolute;
+  background-color: #fff;
+  top: -10px;
+  left: 15px;
+  padding: 0 3px;
+}
+
+.ui-controlgroup {
+  margin: 15px
+}
+
+.ui-checkboxradio-radio-label span:first-child{
+  display: none;
+}
+
+.main-content_slider-and-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 15px;
+}
+
+.main-content_slider {
+  width: 50%;
+  margin: 10px;
+}
+
+.ui-slider {
+  background: linear-gradient(to right,
+    hsl(0,100%,50%),
+    hsl(60,100%,50%),
+    hsl(120,100%,50%),
+    hsl(180,100%,50%),
+    hsl(240,100%,50%),
+    hsl(300,100%,50%),
+    hsl(360,100%,50%)
+  );
+}
+
+.ui-widget-header {
+  background: transparent;
+}
+
+.ui-slider-handle.ui-state-active {
+  background: #ccc;
+}
+
+.main-content_text {
+  width: 50%;
+}
+
+.text-box {
+  font-size: 12px;
+  border: 2px solid #ddd;
+  border-radius: 3px;
+  padding: 20px;
+  background-color: hsla(0, 50%, 70%, 25%);
+  color: hsla(0, 100%, 30%, 100%)
+}
+
